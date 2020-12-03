@@ -3,8 +3,10 @@ function formatTime(date) {
     return timeFormat;
 }
 
-const sampleDate = new Date(Date.now());
-console.log(formatTime(sampleDate));
+setInterval ( () => {
+    const sampleDate = new Date(Date.now());
+    console.log(formatTime(sampleDate));
 
-let clockElement = document.querySelector('.clock__element');
-clockElement.innerText = formatTime(sampleDate);
+    let clockElement = document.querySelector('.clock__element');
+    clockElement.innerText = formatTime(sampleDate);
+},1000);
